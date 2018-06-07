@@ -1,5 +1,4 @@
 import { Directive, ElementRef } from '@angular/core';
-// import { Renderer } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material';
 /**
@@ -14,7 +13,6 @@ export class SvgIconsDirective {
 
   constructor(
     private el: ElementRef,
-    // private renderer: Renderer,
     iconRegistry: MatIconRegistry,
     sanitizer: DomSanitizer
     ) {

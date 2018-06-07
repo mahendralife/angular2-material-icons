@@ -1,6 +1,6 @@
 {
   "name": "angular2-material-icons",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -46,5 +46,22 @@
     "protractor": "~5.3.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1"
-  }
+  },
+  "description": "Angular  directive to use Material Design icons with custom fill-color.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahendralife/angular2-material-icons.git"
+  },
+  "keywords": [
+    "Angular",
+    "Material",
+    "icons"
+  ],
+  "author": "mahendra.life@hotmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahendralife/angular2-material-icons/issues"
+  },
+  "homepage": "https://github.com/mahendralife/angular2-material-icons#readme"
 }
