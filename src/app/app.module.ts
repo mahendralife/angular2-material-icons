@@ -2,19 +2,31 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { Angular2MaterialIconsModule  } from './angular2-material-icons/angular2-material-icons.module';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { SearchbarComponent } from './searchbar/searchbar.component';
+import { MaterialComponenentsModule } from './material.components.module';
+import { AppRoutingModule , routingComponents } from './app.routing';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    SearchbarComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatIconModule,
-    Angular2MaterialIconsModule
+    FlexLayoutModule,
+    Angular2MaterialIconsModule,
+    MaterialComponenentsModule,
+    AppRoutingModule, FormsModule
 
   ],
   providers: [],

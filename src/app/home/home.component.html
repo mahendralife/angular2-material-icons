@@ -1,0 +1,17 @@
+<div class="mat-padding">
+  <mat-grid-list cols="4" rowHeight="2:1" class="mat-padding">
+    <mat-grid-tile *ngFor="let icon of icons; let i=index">
+      <mat-card fxLayout="column" class="spaceall" >
+        <mat-card-content fxLayout="column" fxLayoutAlign="space-between center">
+          <!-- <mat-icon icon  size="50" color="gray" [svgIcon]="svgIcons[icon]" ></mat-icon> -->
+          <p>{{icon}}</p>
+
+          <mat-form-field floatLabel="never" class="search-box">
+            <input matInput readonly value="{{icon}}" name="copy">
+            <button matSuffix mat-button> Copy</button>
+          </mat-form-field>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>  
+</div>
