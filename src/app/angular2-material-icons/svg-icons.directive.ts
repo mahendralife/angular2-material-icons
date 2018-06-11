@@ -1,30 +1,12 @@
-import { Directive, ElementRef, Renderer } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
-import { MatIconRegistry } from '@angular/material';
-/**
- * impoer SVG icon libiary
- */
-import { svgIcons } from './svgIcons';
+import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: 'icon , [icon]'
+  // tslint:disable-next-line:directive-selector
+  selector: '[icon] , mat-icon[svgIcon], [svgIcon]'
 })
 export class SvgIconsDirective {
-
   constructor(
-    private renderer: Renderer,
-    private el: ElementRef,
-    iconRegistry: MatIconRegistry,
-    sanitizer: DomSanitizer
-    ) {
-console.log("call");
-    const svgName = el.nativeElement.getAttribute('svgIcon');
-    if ( svgName ) {
-      const svgIcon = svgIcons[svgName];
-      if ( svgIcon ) {
-        const svgRef = sanitizer.bypassSecurityTrustHtml(`<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">${svgIcon}</svg>`);
-        iconRegistry.addSvgIconLiteral(svgName, svgRef);
-      }
+    private el: ElementRef) {
 
       let style: String = '';
 
@@ -34,17 +16,11 @@ console.log("call");
         style = `color:${color};`;
       }
 
-
       /** Apply size on svg icons*/
       const size = el.nativeElement.getAttribute('size');
       if (size ) {
         style += `width:${size}px; height:${size}px`;
       }
-
       el.nativeElement.setAttribute('style', style);
-
-    } else {
-      console.error('Invalid syntax add  svgIcon attribute on Tag mat-icon eg. <mat-icon icon svgIcon="hangouts"></mat-icon>');
-    }
   }
 }

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { MaterialComponenentsModule } from './material.components.module';
 import { AppRoutingModule , routingComponents } from './app.routing';
+import { FilterPipe } from './filter';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppRoutingModule , routingComponents } from './app.routing';
     HeaderComponent,
     FooterComponent,
     SearchbarComponent,
-    routingComponents
+    routingComponents,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,7 @@ import { AppRoutingModule , routingComponents } from './app.routing';
     AppRoutingModule, FormsModule
 
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
