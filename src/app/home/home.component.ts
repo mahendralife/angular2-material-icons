@@ -9,6 +9,7 @@ import { StoresService } from '../services/stores.service';
 })
 export class HomeComponent implements OnInit {
   svgIcons = svgIcons;
+  iconColor;
   icons = Object.keys(svgIcons);
   isActiveItem: String = null;
   searchByIconName: String;
@@ -25,11 +26,23 @@ export class HomeComponent implements OnInit {
   copyText (icon) {
     this.store.copy(icon);
   }
+
   ngOnInit() {
     this.store.searchText.subscribe(str => {
       this.searchByIconName = str ? str : '' ;
     });
-    this.store.sendtext.subscribe(str =>  this.isActiveItem = null );
+    this.store.sendtext.subscribe(str =>  {
+      if (str) {
+        if (str.indexOf('#') >= 0 ) {
+          this.iconColor = { color: str };
+        }
+
+      }
+      if ( str === 'close' ) {
+        this.isActiveItem = null;
+      }
+
+    } );
   }
 
 }

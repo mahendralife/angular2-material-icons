@@ -2,6 +2,8 @@
   <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
     <span> Material Icons </span>
     <div fxLayout="row" fxLayoutAlign="space-between center">
+      <app-color-menu></app-color-menu>
+      <div>&nbsp;&nbsp;</div>
       <button (click) ="showAlert();" *ngIf="isShowButton" mat-button> <mat-icon svgIcon="content_copy"></mat-icon> Copy</button>
       <div *ngIf="isShowButton">&nbsp;&nbsp;</div>
       <app-searchbar></app-searchbar>

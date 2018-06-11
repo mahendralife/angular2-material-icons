@@ -3,14 +3,13 @@
 @import '~@angular/material/theming';
 
 $general-typography: mat-typography-config(
-  $font-family: "'Source Sans Pro', sans-serif",
-  $body-2:        mat-typography-level(14px, 24px, 600)  
+  $font-family: "'Exo 2', sans-serif",
+  $body-2: mat-typography-level(14px, 24px, 600)  
 );
 
 $secondary-typography: mat-typography-config(
   $font-family: 'Roboto, sans-serif'
 );
-
 
 // Be sure that you only ever include this mixin once!
 @include mat-core($general-typography);
@@ -31,9 +30,10 @@ app-root {
     height: 100%;
 }
 app-footer {
-    background-color: #ececec;
-    padding: 5px;
+    padding: 16px 0;
     border-top: 1px #d0d0d0 solid;
+    font-size: 90%;
+        background-color: white;
 }
 .router-outlet {
     overflow: auto;
@@ -45,6 +45,7 @@ app-footer {
     padding: 16px;
 }
 .mat-card {
+    cursor: pointer;
     padding : 11px !important;
     border: 1px #bdbdbd7d solid;
     border-radius: 8px !important;
@@ -109,3 +110,6 @@ simple-snack-bar {
 .mat-simple-snackbar-action .mat-button {
     min-width: 60px !important;    padding: 0 10px;
 }
+
+.mat-menu-panel {    margin-top: 52px;
+    margin-left: -36px;}

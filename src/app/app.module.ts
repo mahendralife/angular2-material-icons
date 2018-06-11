@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { Angular2MaterialIconsModule  } from './angular2-material-icons/angular2-material-icons.module';
 import { HeaderComponent } from './header/header.component';
+import { ColorMenuComponent } from './header/color-menu/color-menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { MaterialComponenentsModule } from './material.components.module';
@@ -20,7 +21,8 @@ import { FilterPipe } from './filter';
     FooterComponent,
     SearchbarComponent,
     routingComponents,
-    FilterPipe
+    FilterPipe,
+    ColorMenuComponent
   ],
   imports: [
     BrowserModule,

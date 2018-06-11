@@ -1,0 +1,13 @@
+<button mat-icon-button [matMenuTriggerFor]="menu">
+  <mat-icon svgIcon="format_color_fill" size="24"></mat-icon>
+</button>
+<mat-menu #menu="matMenu" MenuPositionX="500" MenuPositionX="50">
+  <mat-grid-list cols="2" rowHeight="2:2">
+    <mat-grid-tile *ngFor ="let color of colors">
+      <button mat-icon-button [ngStyle] ="{ 'background-color': color}" (click) ="updateColor(color)">
+      </button>
+    </mat-grid-tile>
+   
+
+  </mat-grid-list>
+</mat-menu>
