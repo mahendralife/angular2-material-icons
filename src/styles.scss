@@ -1,0 +1,115 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import '~@angular/material/theming';
+
+$general-typography: mat-typography-config(
+  $font-family: "'Exo 2', sans-serif",
+  $body-2: mat-typography-level(14px, 24px, 600)  
+);
+
+$secondary-typography: mat-typography-config(
+  $font-family: 'Roboto, sans-serif'
+);
+
+// Be sure that you only ever include this mixin once!
+@include mat-core($general-typography);
+
+* {
+    box-sizing : border-box;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    background-color: #d8d8d8;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+app-root {
+    display: block;
+    height: 100%;
+}
+app-footer {
+    padding: 16px 0;
+    border-top: 1px #d0d0d0 solid;
+    font-size: 90%;
+        background-color: white;
+}
+.router-outlet {
+    overflow: auto;
+    position: absolute;
+    top: 64px;
+    bottom: 0;left: 0; right: 0;
+}
+.mat-padding {
+    padding: 16px;
+}
+.mat-card {
+    cursor: pointer;
+    padding : 11px !important;
+    border: 1px #bdbdbd7d solid;
+    border-radius: 8px !important;
+    width: 100%;
+    max-width: 150px; display: inline-block;
+    margin: auto;
+}
+.mat-card.active {
+    background-color: #673ab7;
+    color: white;
+}
+.mat-card mat-icon {    
+    color: gray;
+}
+
+.mat-card.active  mat-icon { 
+    color: white !important;
+}
+.inline {
+    float: left;
+    width: 14.2857143%;
+    margin-bottom: 15px;
+}
+.clearfix {
+    clear: both;
+    float: left;
+    width: 100%;
+}
+.title { 
+    max-width: 140px;
+    text-align: center;
+    overflow: hidden; font-size: 90%;
+    text-overflow: ellipsis;
+}
+
+mat-card-content .mat-button {    
+    border: 1px #6b33bd4d solid;
+    padding: 0 !important;
+    min-width: 60px;
+    color: #6b33bd;
+    background-color: white;
+    border-radius: 4px 4px 0 0;
+}
+
+mat-card-content    .mat-form-field-appearance-legacy .mat-form-field-underline {    
+    background-color: rgba(107, 51, 189, 0.56);
+}
+
+.copy {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    user-select: none;
+    cursor: pointer;
+    font-size: 11px;
+    color: #673ab7;
+    font-weight: 600;
+}
+simple-snack-bar {
+        font-size: 90% !important;
+}
+.mat-simple-snackbar-action .mat-button {
+    min-width: 60px !important;    padding: 0 10px;
+}
+
+.mat-menu-panel {    margin-top: 52px;
+    margin-left: -36px;}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StoresService } from '../services/stores.service';
 
 @Component({
   selector: 'app-searchbar',
@@ -6,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./searchbar.component.css']
 })
 export class SearchbarComponent implements OnInit {
+  iconNameSearch: String;
 
-  constructor() { }
+  constructor(private stote: StoresService) {}
 
+  searchTextByName(searchStr: String) {
+    setTimeout(() => { this.stote.search(searchStr);
+    }, 200);
+  }
+  clear () {
+    this.iconNameSearch = null;
+    setTimeout(() => {
+      this.stote.search('');
+    }, 200);
+
+  }
   ngOnInit() {
   }
 
