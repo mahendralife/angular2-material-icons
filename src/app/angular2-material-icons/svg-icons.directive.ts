@@ -1,6 +1,7 @@
 import { Directive, ElementRef, Renderer } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material';
+
 /**
  * impoer SVG icon libiary
  */
@@ -17,7 +18,8 @@ export class SvgIconsDirective {
     iconRegistry: MatIconRegistry,
     sanitizer: DomSanitizer
     ) {
-console.log("call");
+   
+
     const svgName = el.nativeElement.getAttribute('svgIcon');
     if ( svgName ) {
       const svgIcon = svgIcons[svgName];
