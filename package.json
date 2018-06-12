@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "live": "ng build --aot --prod --vendor-chunk --common-chunk --build-optimizer --named-chunks"
+    "live": "ng build --base-href=https://mahendralife.github.io/angular2-material-icons/  --aot --prod --vendor-chunk --common-chunk --build-optimizer --named-chunks"
   },
   "private": true,
   "dependencies": {
