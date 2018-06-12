@@ -1,5 +1,0 @@
-<mat-form-field floatLabel="never" class="search-box">
-  <input matInput (keyup) ="searchTextByName(iconNameSearch)"  [(ngModel)] ="iconNameSearch" placeholder="Filter by name"  autocomplete="off">
-  <mat-icon *ngIf="!iconNameSearch" matSuffix icon svgIcon="search"></mat-icon>
-  <mat-icon *ngIf="iconNameSearch" matSuffix icon svgIcon="close" (click) ="clear()"></mat-icon>
-</mat-form-field>
