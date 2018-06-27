@@ -8,8 +8,7 @@ Angular  directive to use Material Design icons with custom fill-color.
 # Live URL 
 [Demo Url](https://mahendralife.github.io/angular2-material-icons/)
 
-#inspire by  
-https://github.com/klarsys/angular-material-icons
+#inspire by  [angular-material-icons](https://github.com/klarsys/angular-material-icons)
 
 #To Do
 Create Sparte Component for each SVG icon (Import and Export )
